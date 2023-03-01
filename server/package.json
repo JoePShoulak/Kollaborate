@@ -7,8 +7,6 @@
     "postinstall": "npm run build",
     "build": "rm -rf ./dist && cross-env NPM_CONFIG_PRODUCTION=false babel -d ./dist ./src -s"
   },
-  "author": "amazingandyyy",
-  "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.15.2",

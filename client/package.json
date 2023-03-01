@@ -9,8 +9,6 @@
     "copy:static": "cp -rf ./src/statics ../docs",
     "dev:parcel": "parcel ./src/index.html --open"
   },
-  "author": "amazingandyyy",
-  "license": "MIT",
   "devDependencies": {
     "@parcel/transformer-sass": "2.8.2",
     "buffer": "^5.5.0",

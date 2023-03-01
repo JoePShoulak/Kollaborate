@@ -1,6 +1,6 @@
 {
-  "name": "mern",
-  "description": "CRUD in MongoDB, Express, React/Hooks, Node",
+  "name": "Kollaborate",
+  "description": "Kerbal Flight Sharer",
   "main": "index.js",
   "scripts": {
     "test": "eslint --fix **/src/",
@@ -16,17 +16,15 @@
   "engineStrict": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amazingandyyy/mern.git"
+    "url": "git@github.com:JoePShoulak/Kollaborate.git"
   },
   "keywords": [
     "react"
   ],
-  "author": "Amazingandyyy <amazingandyyy@gmail.com> (Andy Chen)",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amazingandyyy/mern/issues"
+    "url": "https://github.com/JoePShoulak/Kollaborate/issues"
   },
-  "homepage": "https://github.com/amazingandyyy/mern#readme",
+  "homepage": "https://github.com/JoePShoulak/Kollaborate",
   "devDependencies": {
     "eslint": "^4.14.0",
     "eslint-config-logux": "^17.0.0",

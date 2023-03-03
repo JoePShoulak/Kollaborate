@@ -1,45 +1,70 @@
-# client-side
-React/Redux
+# Getting Started with Create React App
 
-# Usage(make it run on your machine)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Client-side usage(PORT: 3000)
-```terminal
-$ cd client   // go to client folder
-$ yarn        // npm install packages
-$ yarn dev    // run it locally
+## Available Scripts
 
-// deployment for client app
-$ yarn build // this will compile the react code using webpack and generate a folder called docs in the root level
-$ yarn start // this will run the files in docs, this behavior is exactly the same how gh-pages will run your static site
+In the project directory, you can run:
 
-// use parcel to run
-$ yarn dev:parcel
-```
+### `npm start`
 
-# Some screenshots
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-User visit public and Home page
-![User visit public and Home page](http://i.imgur.com/ORCGHHY.png)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-User can sign in or sign up
-![User can sign in or sign up](http://i.imgur.com/rrmbU5I.png)
+### `npm test`
 
-After signing in user can go to account page and make request to token-protected API endpoint
-![After signing in user can go to account page](http://i.imgur.com/FzLB51u.png)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Bugs or comments
-[Create new Issues](https://github.com/amazingandyyy/mern/issues)
+### `npm run build`
 
-## Author
-[Amazingandyyy](amazingandyyy.github.io)
-- Feel free to find me on _[GitHub](https://github.com/amazingandyyy)_ and _[LiveCoding](https://www.livecoding.tv/amazingandyyy/)_
-- or visit my _[page](http://amazingandyyy.github.io/)_
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### License
-[MIT](https://github.com/amazingandyyy/eventbrite-api/blob/master/LICENSE)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### TODO
-- Remove webpack
-- Add env for deployment .env.dev .env.prod
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

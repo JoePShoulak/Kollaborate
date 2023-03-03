@@ -1,44 +1,19 @@
 {
-  "name": "Kollaborate",
-  "description": "Kerbal Flight Sharer",
+  "name": "kollaborate",
+  "version": "1.0.0",
+  "description": "KSP ship sharer",
   "main": "index.js",
   "scripts": {
-    "test": "eslint --fix **/src/",
-    "precommit": "npm test",
-    "prepush": "npm test",
-    "heroku:add": "heroku git:remote -a",
-    "deploy:heroku": "git subtree push --prefix server heroku master"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=6.0.0"
-  },
-  "engineStrict": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:JoePShoulak/Kollaborate.git"
+    "url": "git+https://github.com/JoePShoulak/Kollaborate.git"
   },
-  "keywords": [
-    "react"
-  ],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/JoePShoulak/Kollaborate/issues"
   },
-  "homepage": "https://github.com/JoePShoulak/Kollaborate",
-  "devDependencies": {
-    "eslint": "^4.14.0",
-    "eslint-config-logux": "^17.0.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-es5": "^1.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jest": "^21.5.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-react": "^7.5.1",
-    "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "husky": "^0.14.3",
-    "nodemon": "^1.17.5"
-  },
-  "dependencies": {}
+  "homepage": "https://github.com/JoePShoulak/Kollaborate#readme"
 }

@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  flex: auto;
+  flex-direction: column;
+}
+.Header{
+
+}
+.Footer{
+  
 }
 
 .App-logo {
@@ -26,6 +34,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.shipst{
+  border-style: dashed;
+  border-color: black;
 }
 
 @keyframes App-logo-spin {

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JoePShoulak/Kollaborate/issues"
   },
-  "homepage": "https://github.com/JoePShoulak/Kollaborate#readme"
+  "homepage": "https://github.com/JoePShoulak/Kollaborate#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
 }

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.set("debug","true");
-const db = mongoose.connect('mongodb://127.0.0.1:27017/kerbs');
+// console.log(process.env);
+const db = mongoose.connect(process.env.MONGOURL);
 
 module.exports = db;

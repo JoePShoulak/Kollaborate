@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+require('dotenv').config();
 const db = require("./config/connect");
 // const routes = require("./routes"); // <- Will need to create routes folder and its contents later
 

@@ -2,12 +2,21 @@
   text-align: center;
   flex: auto;
   flex-direction: column;
+  
 }
+
 .Header{
+  position: relative;
+}
+.Ships{
+  position: relative;
 
 }
 .Footer{
-  
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0px;
+  background-color: red;
 }
 
 .App-logo {

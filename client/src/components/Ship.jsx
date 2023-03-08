@@ -21,7 +21,7 @@ const Ship = () => {
     }
 
     return (
-        <>
+        <div className="Ships">
             <input
                 type="text"
                 onChange={e => parse(e.target.value)}
@@ -42,7 +42,7 @@ const Ship = () => {
                     </div>  
                 );
             })}
-        </>
+        </div>
     );
 }
 export default Ship;

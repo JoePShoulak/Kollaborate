@@ -1,5 +1,4 @@
-import mongoose, { mongo } from 'mongoose';
-const { Schema, model } = mongoose;
+const { Schema, model } = require("mongoose");
 
 const shipSchema = new Schema(
     {
@@ -9,6 +8,6 @@ const shipSchema = new Schema(
         date: {type: Date, default: Date.now}
     });
 
-const Ship = mongoose.model("Ships",shipSchema);
+const Ship = model("Ships",shipSchema);
 
-export default Ship;
+module.exports = Ship;

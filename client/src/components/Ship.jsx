@@ -21,7 +21,6 @@ const Ship = () => {
             //grab logged in user from the context here and add it before we store it. store it eventually and probably add confirmation
             let shipObject = {author: "placeholder",payload: shipData};
             setShip(shipObject);
-            // axios.post("http://localhost:3001/ships/add",shipObject).then(console.log("Poggers"));
         }
     }
 
@@ -38,7 +37,7 @@ const Ship = () => {
         console.log("uploading ",ship);
         axios.post("http://localhost:3001/ships/add",ship).then(setShip());
     }
-    //Need to clean up the input. Area to paste then area to edit name and description version and add picture.c
+    //Need to clean up the input. area to change version and add picture.
     return (//maybe add version change so they can change at will
         <div className="Ships">
             {ship &&

@@ -9,22 +9,15 @@ const Ship = () => {
     useEffect(()=>{
         axios.get("http://localhost:3001/ships/").then((payload)=>{
             let body = JSON.parse(payload.request.response);
-
             body.forEach((ship)=>{
-                console.log(ship);
                 ship={auhtor:"placeholder",payload: ship.payload};
             });
             setShips([...ships,...body]);
         });
     },[]);
-    const parse = (ship) =>{ //ship consists of (name,desc,version,author,stages,jsonPayload)
-        if (ship){;
+    const parse = (ship) => { //ship consists of (name,desc,version,author,stages,jsonPayload)
+        if (ship){
             let shipData = JSON.parse(ship);//could possibly break this out later down the line. With bigger ships and alot on view this could be slow I Dont know.
-            console.log(shipData);
-            // let shipName = shipData.AssemblyDefinition.assemblyName;
-            // let shipDescription = shipData.AssemblyDefinition.description;
-            // let shipVersion = shipData.AssemblyDefinition.version;  
-            // let shipNumStages = shipData.AssemblyOABConfig.StagingState.totalStageCount;
             //grab logged in user from the context here and add it before we store it. store it eventually and probably add confirmation
             let shipObject = {author: "placeholder",payload: shipData};
             setShip(shipObject);
@@ -34,15 +27,19 @@ const Ship = () => {
 
     const submitShip = () => {
         let temp = ship;
-        temp.payload.AssemblyDefinition.assemblyName = name;//this probably should be capped or needs to be capped for safety
-        temp.payload.AssemblyDefinition.description = description;//same with this
+        if(name){
+            temp.payload.AssemblyDefinition.assemblyName = name;//this probably should be capped or needs to be capped for safety
+        }
+        if(description){
+            temp.payload.AssemblyDefinition.description = description;//same with this
+        }
         setShip(temp);
         setShips([...ships,temp]);
         console.log("uploading ",ship);
         axios.post("http://localhost:3001/ships/add",ship).then(setShip());
     }
     //Need to clean up the input. Area to paste then area to edit name and description version and add picture.c
-    return (
+    return (//maybe add version change so they can change at will
         <div className="Ships">
             {ship &&
                 <div>
@@ -52,20 +49,16 @@ const Ship = () => {
                         name="nameOfShip"
                         defaultValue={ship.payload.AssemblyDefinition.assemblyName}
                         onChange={e => setName(e.target.value)}
-                // onSubmit={do something}
                     />
                     <label>Ship Description</label>
                     <input
                         type="text"
                         name="drescriptionOfShip"
                         defaultValue={ship.payload.AssemblyDefinition.description}
-                        onChange={e=> setDescription(e.target.value)}
+                        onChange={e => setDescription(e.target.value)}
                     />
-                    <input
-                        type="button"
-                        name="sendShip"
-                        onClick={e => submitShip()}
-                    />
+                    <button name="sendShip" onClick={e => submitShip()}>Submit</button>
+                    
                 </div>
             }
             {!ship && 
@@ -80,7 +73,6 @@ const Ship = () => {
                 />
             }
             {ships.map((dat,index)=>{//add a edit button later down the line maybe
-                {console.log(dat);}
                 return (
                     <div className="shipst">
                         <h2>{dat.payload.AssemblyDefinition.assemblyName}</h2>

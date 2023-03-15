@@ -2,9 +2,8 @@ const { Schema, model } = require("mongoose");
 
 const shipSchema = new Schema(
     {
-        name: String,
         author: String,
-        dataPayload: JSON,
+        payload: JSON,
         date: {type: Date, default: Date.now}
     });
 

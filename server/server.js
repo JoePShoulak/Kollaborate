@@ -11,13 +11,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json({limit: 1000000}));
 
 
-app.use(express.static(path.join(__dirname, "../client/build"))); // <- This route may need to change in the fututre
+app.use(express.static(path.join(__dirname, "../client/build"))); // uncomment this to run normally
 // if (process.env.NODE_ENV === "production") {
 // }
 app.use(routes);
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
+// app.use((req, res) => {
+//   res.sendFile(path.join(__dirname, '../client/build/index.html'));
+// });
 
 
 app.listen(PORT, () => console.log(`Now listening on  http://localhost:${PORT}`));

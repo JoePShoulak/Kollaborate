@@ -7,10 +7,10 @@ const Ship = () => {
     const [description,setDescription] = useState('');
     const [ships,setShips] = useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:3001/ships/").then((payload)=>{
+        axios.get("http://localhost:4000/api/ships/").then((payload)=>{
             let body = JSON.parse(payload.request.response);
             body.forEach((ship)=>{
-                ship={auhtor:"placeholder",payload: ship.payload};
+                ship={author:"placeholder",payload: ship.payload};
             });
             setShips([...ships,...body]);
         });
@@ -35,7 +35,7 @@ const Ship = () => {
         setShip(temp);
         setShips([...ships,temp]);
         console.log("uploading ",ship);
-        axios.post("http://localhost:3001/ships/add",ship).then(setShip());
+        axios.post("http://localhost:4000/api/ships/add",ship).then(setShip());
     }
     //Need to clean up the input. area to change version and add picture.
     return (//maybe add version change so they can change at will

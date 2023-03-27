@@ -7,7 +7,7 @@ const routes = require("./routes"); // <- Will need to create routes folder and 
 
 const app = express();
 const PORT = process.env.PORT || 4000;
-app.use(cors());
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({limit: 1000000}));
 app.use(express.static(path.join(__dirname, "../client/build"))); // uncomment this to run normally
@@ -16,5 +16,4 @@ app.use(express.static(path.join(__dirname, "../client/build"))); // uncomment t
 // });
 
 app.use(routes);
-// app.use(cors({origin: false}));
 app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT}`));

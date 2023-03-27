@@ -3,10 +3,9 @@ import { useGoogleLogin,googleLogout } from '@react-oauth/google';
 const Header = () =>{
     // process.env.OAUTH
     const establishUser = (res) =>{
-        //https://www.googleapis.com/auth/userinfo.email
         axios({
             method: "get",
-            url: `https://www.googleapis.com/auth/userinfo.email?${res.access_token}`,
+            url: `https://people.googleapis.com/v1/people/me?personFields=emailAddresses`,
             headers: {
                 Authorization: `Bearer ${res.access_token}`,
                 Accept: 'application/json',
@@ -15,7 +14,7 @@ const Header = () =>{
 
         }).then((res)=>{
             console.log(res);
-        })
+        });
     }
 
     const login = useGoogleLogin({

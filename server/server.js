@@ -16,4 +16,5 @@ app.use(express.static(path.join(__dirname, "../client/build"))); // uncomment t
 // });
 
 app.use(routes);
+// app.use(cors({origin: false}));
 app.listen(PORT, () => console.log(`Now listening on http://localhost:${PORT}`));

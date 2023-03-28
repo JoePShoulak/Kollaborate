@@ -30,14 +30,6 @@ const Header = () =>{
             <button onClick={() => login()}>Login</button>
             <button onClick={() => googleLogout()}>Logout</button>
 
-            {/* <GoogleLogin
-                onSuccess={credentialResponse => {
-                    console.log(credentialResponse);
-                }}
-                onError={() => {
-                    console.log('Login Failed');
-                }}
-            />   */}
         </div>
     );
 }

@@ -2,14 +2,23 @@ import axios from "axios";
 import { useGoogleLogin,googleLogout } from '@react-oauth/google';
 const Header = () =>{
     // process.env.OAUTH
+    const savedCreds = localStorage.getItem("kollabDeets");
     const establishUser = (res) =>{
+        console.log("Establishing user.");
+        // if(!savedCreds){
+        //     console.log("Nothing found in local storage saving.");
+        //     savedCreds=res;
+        //     let temp = JSON.stringify(savedCreds);
+        //     console.log(temp);
+        //     localStorage.setItem("kollaDeets",temp);
+        // }
+        console.log(res);
         axios({
             method: "get",
             url: `https://people.googleapis.com/v1/people/me?personFields=emailAddresses`,
             headers: {
                 Authorization: `Bearer ${res.access_token}`,
                 Accept: 'application/json',
-                
             }
 
         }).then((res)=>{
@@ -18,7 +27,10 @@ const Header = () =>{
     }
 
     const login = useGoogleLogin({
-        onSuccess: tokenResponse => establishUser(tokenResponse),
+        onSuccess: tokenResponse => {
+            //maybe slap it into local storage for the time being
+            establishUser(tokenResponse)
+        },
     });
 
     return(
